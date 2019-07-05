@@ -29,25 +29,8 @@ struct ps3ctls {
 int btn[NumberOfButton] = {};
 int b_btn[NumberOfButton] = {};
 int fds;
-int mode = 10;
 
-int l_mode = 3;
-int l_mode_a = 60;//55
-int l_mode_b = -80;
-int r_mode = 3;
-int r_mode_a = 72 ;
-int r_mode_b = +90;
-int t_mode = 0;
-int h_mode = 12;
-int d_mode = 1;
-int lock = 0;
-int petBottleLock = 0;
-int megaPhonePush = 0;
-int clawOn = 0;
-int clawArc = +27;
-int UpDown = 0;
 int ready_Go = 0;
-
 int grip = 0;
 
 int btn_tri = 0;
@@ -99,7 +82,6 @@ int ps3c_test(struct ps3ctls *ps3dat) {
 	int i;
 	unsigned char nr_btn = ps3dat->nr_buttons;
 	unsigned char nr_stk = ps3dat->nr_sticks;
-	int xx,yy,x,y,z,v1,v2,ww,c1,c2,c3,c4;
 
 
 	printf("%d ",digitalRead(0));	// YELLOW TEST
