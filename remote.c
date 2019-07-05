@@ -338,7 +338,6 @@ void main() {
 
 	if(!(ps3c_init(&ps3dat, df))) {
 
-		UpDown = 0;
 		setPCA9685Duty(fds , 0 ,   0);
 		setPCA9685Duty(fds , 1 ,   0);
 		setPCA9685Duty(fds , 2 ,   0);
