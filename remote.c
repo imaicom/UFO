@@ -137,7 +137,7 @@ int ps3c_test(struct ps3ctls *ps3dat) {
 		setPCA9685Duty(fds , 1 , +50);
 		setPCA9685Duty(fds , 2 , +50);
 		setPCA9685Duty(fds , 3 , +95); grip = 1;
-		delay(9000);
+		delay(10000);
 		setPCA9685Duty(fds , 0 , 0);
 		setPCA9685Duty(fds , 1 , 0);
 		setPCA9685Duty(fds , 2 , 0);
@@ -197,7 +197,7 @@ int ps3c_test(struct ps3ctls *ps3dat) {
 		setPCA9685Duty(fds , 1 , -50);
 		setPCA9685Duty(fds , 2 , +50);
 		setPCA9685Duty(fds , 3 , -95); grip = 0;// CLOSE	// imai grip->hold
-		delay(9000);
+		delay(10000);
 		setPCA9685Duty(fds , 0 , 0);
 		setPCA9685Duty(fds , 1 , 0);
 		setPCA9685Duty(fds , 2 , 0);
@@ -330,7 +330,7 @@ void main() {
 
 	fds = wiringPiI2CSetup(0x40);	// PCA9685
 	resetPCA9685(fds);
-	setPCA9685Freq(fds,50);
+	setPCA9685Freq(fds,45);
 //	system("mpg123 /home/pi/Music/Time-Bokan.mp3");
 //	system("mpg123 /home/pi/Music/famicon_goldenBomber.mp3 &");
 	delay(200);
