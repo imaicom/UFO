@@ -137,7 +137,7 @@ int ps3c_test(struct ps3ctls *ps3dat) {
 		setPCA9685Duty(fds , 1 , +50);
 		setPCA9685Duty(fds , 2 , +50);
 		setPCA9685Duty(fds , 3 , +95); grip = 1;
-		delay(10000);
+		delay(9000);
 		setPCA9685Duty(fds , 0 , 0);
 		setPCA9685Duty(fds , 1 , 0);
 		setPCA9685Duty(fds , 2 , 0);
@@ -197,7 +197,7 @@ int ps3c_test(struct ps3ctls *ps3dat) {
 		setPCA9685Duty(fds , 1 , -50);
 		setPCA9685Duty(fds , 2 , +50);
 		setPCA9685Duty(fds , 3 , -95); grip = 0;// CLOSE	// imai grip->hold
-		delay(10000);
+		delay(9000);
 		setPCA9685Duty(fds , 0 , 0);
 		setPCA9685Duty(fds , 1 , 0);
 		setPCA9685Duty(fds , 2 , 0);
