@@ -164,28 +164,31 @@ int ps3c_test(struct ps3ctls *ps3dat) {
 	if(ps3dat->button[PAD_KEY_R1]) btn_r1++;		// GAME
 	if(!ps3dat->button[PAD_KEY_R1]) btn_r1 = 0;
 	if(b_btn_r1 > btn_r1) {
-		system("mpg123 /home/pi/Music/GAME_START.mp3");
+		system("mpg123 /home/pi/Music/1.mp3");
+//		system("mpg123 /home/pi/Music/GAME_START.mp3");
 		while(!digitalRead(0));	// imai ->break
 		delay(100);
 		setPCA9685Duty(fds , 0 , -50);	// imai->sound
 		while(digitalRead(0)) delay(100);	// imai ->break
 		setPCA9685Duty(fds , 0 , 0);
 
-		system("mpg123 /home/pi/Music/NEXT.mp3");
+//		system("mpg123 /home/pi/Music/NEXT.mp3");
+		system("mpg123 /home/pi/Music/2.mp3");
 		while(!digitalRead(0));	// imai ->break
 		delay(100);
 		setPCA9685Duty(fds , 1 , -50);	// imai->sound
 		while(digitalRead(0)) delay(100);	// imai ->break
 		setPCA9685Duty(fds , 1 , 0);
 
-		system("mpg123 /home/pi/Music/NEXT.mp3");
+//		system("mpg123 /home/pi/Music/NEXT.mp3");
+		system("mpg123 /home/pi/Music/3.mp3");
 		while(!digitalRead(0));	// imai ->break
 		delay(100);
 		setPCA9685Duty(fds , 2 , -50);	// imai->sound
 		setPCA9685Duty(fds , 3 , +95); grip = 1;// OPEN
 		while(digitalRead(0)) delay(100);	// imai ->break
 		setPCA9685Duty(fds , 2 , 0);
-//		system("mpg123 /home/pi/Music/NEXT.mp3");
+		system("mpg123 /home/pi/Music/4.mp3");
 
 		setPCA9685Duty(fds , 3 , -95); grip = 0;// CLOSE
 		delay(4000);
